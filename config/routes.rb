@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'about/index'
   root 'albums#index'
   resources :albums do
     member do

@@ -8,8 +8,8 @@
 
 <% if @album.album_photos.attached? %>
   <% @album.album_photos.order("created_at DESC").each do |album_photos| %>
-    <div style="margin: 5px;border: 1px solid #ccc;float: left;width: 150px;">
-    <%= link_to image_tag(album_photos, style: "width: 150px; height: 150px;", alt: album_photos.filename.to_s), album_photos, target: "_blank"%>
+    <div style="margin: 5px;border: 1px solid #ccc;float: left;width: 250px;">
+    <%= link_to image_tag(album_photos, style: "width: 250px; height: 250px;", alt: album_photos.filename.to_s), album_photos, target: "_blank"%>
     
     <div style="padding: 8px;text-align: center;font-size: 0.7em">
     <%= number_to_human_size(album_photos.byte_size.to_i) %>

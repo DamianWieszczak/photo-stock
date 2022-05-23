@@ -1,13 +1,12 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Albums</h1>
 
-<table>
-  <thead>
+<table class="table table-bordered">
+  <thead class="thead-dark">
     <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th colspan="3">Actions</th>
     </tr>
   </thead>
 
@@ -16,9 +15,9 @@
       <tr>
         <td><%= album.title %></td>
         <td><%= album.description %></td>
-        <td><%= link_to 'Show', album %></td>
-        <td><%= link_to 'Edit', edit_album_path(album) %></td>
-        <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', album, class: "badge badge-secondary" %></td>
+        <td><%= link_to 'Edit', edit_album_path(album), class: "badge badge-warning" %></td>
+        <td><%= link_to 'Destroy', album, class: "badge badge-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +25,4 @@
 
 <br>
 
-<%= link_to 'New Album', new_album_path %>
+<%= link_to 'New Album', new_album_path, class: "btn btn-primary" %>

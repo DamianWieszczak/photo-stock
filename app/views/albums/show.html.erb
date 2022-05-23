@@ -1,7 +1,11 @@
-<p><strong>Title:</strong><%= @album.title %></p>
-<p><strong>Description:</strong><%= @album.description %></p>
-<%= link_to 'Edit', edit_album_path(@album) %> |
-<%= link_to 'Back', albums_path %>
+<div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+  <div class="card-header"><%= @album.title %></div>
+  <div class="card-body">
+    <p class="card-text"><%= @album.description %></p>
+    <%= link_to 'Edit', edit_album_path(@album), class: "badge badge-pill badge-warning" %> |
+    <%= link_to 'Back', albums_path, class: "badge badge-pill badge-info" %>
+  </div>
+</div>
 
 <hr>
 
@@ -13,8 +17,8 @@
     
     <div style="padding: 8px;text-align: center;font-size: 0.7em">
     <%= number_to_human_size(album_photos.byte_size.to_i) %>
-    <%= link_to "Download", album_photos, target: "_blank" %>
-    <%= link_to 'Delete', delete_album_photos_album_url(album_photos), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to "Download", album_photos, target: "_blank", class: "badge badge-pill badge-secondary" %>
+    <%= link_to 'Delete', delete_album_photos_album_url(album_photos), class: "badge badge-pill badge-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
 </div>
   <% end %>

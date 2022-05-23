@@ -1,24 +1,10 @@
-# README
+<h1>Photo-Stock</h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<hr>
 
-Things you may want to cover:
+<p>This is a very simple application where you can create albums and add your photos containing many great memories and beautiful views!</p>
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<p>
+  Ruby: v - 2.7.5p203
+  Rails: v - 6.1.6
+</p>
